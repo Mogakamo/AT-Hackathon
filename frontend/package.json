@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -p tsconfig.prod.json && vite build",
+    "test": "NODE_ENV=test jest",
     "preview": "vite preview"
   },
   "dependencies": {
