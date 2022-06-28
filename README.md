@@ -6,19 +6,19 @@
 ## Install
 
 ```sh
-npm i
+yarn
 ```
 
 ## Usage
 
 ```sh
-npm run start
+yarn dev
 ```
 
 ## Run tests
 
 ```sh
-npm test
+yarn test
 ```
 
 ## Author
