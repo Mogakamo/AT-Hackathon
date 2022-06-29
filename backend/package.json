@@ -4,6 +4,7 @@
   "description": "This is the REST API that will be handle the flow of the application to the database",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "jest"
   },
   "repository": {

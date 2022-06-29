@@ -24,7 +24,7 @@ app.use(cors());
 
 // API root
 const userRoute = require("./routes/user");
-app.use("/users", apiRoutes);
+app.use("/users", userRoute);
 
 // Port
 const port = process.env.PORT || 4010;
