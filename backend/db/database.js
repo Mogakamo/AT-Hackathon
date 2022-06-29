@@ -1,3 +1,3 @@
 module.exports = {
-  db: process.env.MONGODB_DATABASE,
+  db: "mongodb://127.0.0.1:27017/AT-Hackathon",
 };

@@ -14,7 +14,7 @@ router.route("/").get((req, res) => {
 });
 
 // GET one user
-router.route("/users/:id").get((req, res) => {
+router.route("/:id").get((req, res) => {
   User.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error);
@@ -25,7 +25,7 @@ router.route("/users/:id").get((req, res) => {
 });
 
 // Create a user
-router.route("/users/create").post((req, res, next) => {
+router.route("/create").post((req, res, next) => {
   User.create(req.body, (error, data) => {
     if (error) {
       return next(error);
@@ -37,7 +37,7 @@ router.route("/users/create").post((req, res, next) => {
 });
 
 // Update a user
-router.route("/users/update/:id").put((req, res, next) => {
+router.route("/update/:id").put((req, res, next) => {
   User.findByIdAndUpdate(req.params.id, req.body, (error, data) => {
     if (error) {
       return next(error);
@@ -49,7 +49,7 @@ router.route("/users/update/:id").put((req, res, next) => {
 });
 
 // Delete a user
-router.route("/users/delete/:id").delete((req, res, next) => {
+router.route("/delete/:id").delete((req, res, next) => {
   User.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
