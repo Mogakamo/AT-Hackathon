@@ -1,20 +1,15 @@
 {
-  "name": "e-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "This is the server for the application",
+  "description": "This is the REST API that will be handle the flow of the application to the database",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "test"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mogakamo/AT-Hackathon/backend"
   },
   "author": "Amos Nyaburi",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.0",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "mongodb": "4.7",
-    "mongoose": "^6.4.1",
-    "nodemon": "^2.0.18"
-  }
+  "license": "ISC"
 }
