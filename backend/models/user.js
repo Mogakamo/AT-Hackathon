@@ -45,17 +45,19 @@ const userSchema = new Schema(
   }
 );
 
-
 // Hash the password before saving
-userSchema.pre("save",  save = async(next) => {
-  try {
-    if(!this.isModified('password')) return next();
+userSchema.pre(
+  "save",
+  (save = async (next) => {
+    try {
+      if (!this.isModified("password")) return next();
 
-    const rounds = env === 'test' ? 1 : 10;
+      const rounds = env === "test" ? 1 : 10;
 
-    // const hash = 
-  } catch (err) {
-    return next(error)
-  }
-
+      // const hash =
+    } catch (err) {
+      return next(error);
+    }
+  })
+);
 module.exports = mongoose.model("User", userSchema);
